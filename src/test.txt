@@ -1,2 +1,0 @@
-This is to test the pushing of local changes to remote git repo.
-Thank you.
