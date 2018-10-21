@@ -1,14 +1,16 @@
 import 'babel-polyfill';
 import React from 'react';
-import ReactDom from 'react-dom';
-import {Router, browserHistory} from 'react-router';
-import routes from './routes';
+import { render } from 'react-dom';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 import HelloWorld from './components/HelloWorld'
 
 import './styles/app.scss';
 //shows compilation error
-ReactDom.render(
-  <Router history={browserHistory} routes={routes} />,
+render((
+<Router>
+<Route path='/' component={HelloWorld} />
+</Router>
+),
   document.getElementById('app')
 )
