@@ -9,6 +9,7 @@ import { Switch } from 'react-router-dom'
 import rootReducer from './reducers';
 
 import HelloWorld from './components/HelloWorld'
+import DisplayUsers from './components/usersComponents/DisplayUsers'
 
 const store = createStore(rootReducer, applyMiddleware(thunk));
 
@@ -18,6 +19,7 @@ render((
 <Router>
 <Switch>
 <Route exact path='/helloworld' component={HelloWorld} />
+<Route path='/displayusers' component={DisplayUsers} />
 </Switch>
 </Router>
 </Provider>
