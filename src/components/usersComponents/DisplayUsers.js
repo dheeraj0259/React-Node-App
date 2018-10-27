@@ -40,4 +40,4 @@ const mapDispatchToProps = dispatch => ({
   fetchUsers: () => dispatch(fetchUsers())
 })
 
-export default connect(mapStateToProps,mapDispatchToProps,)(DisplayUsers);
+export default connect(mapStateToProps,mapDispatchToProps)(DisplayUsers);
