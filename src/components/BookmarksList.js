@@ -1,7 +1,7 @@
-import React from 'react';
-import { connect } from 'react-redux';
-import Bookmark from '../components/Bookmark';
-import { deleteBookmark } from '../actions';
+import React from "react";
+import { connect } from "react-redux";
+import Bookmark from "../components/Bookmark";
+import { deleteBookmark } from "../actions";
 
 function BookmarksList({ bookmarks, onDelete }) {
   return (

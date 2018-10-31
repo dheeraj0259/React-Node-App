@@ -1,0 +1,11 @@
+.tableRowHeader {
+background-color: black
+}
+
+.tableCellHeader {
+    color: wheat !important
+}
+
+.tableRowBody{
+    background-color: #f5deb359
+}

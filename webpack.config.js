@@ -18,13 +18,14 @@ module.exports = {
       rules: [
          {
              test: /\.jsx?$/,
+             exclude: /(node_modules|bower_compontents)/,
              use: {
                 loader: 'babel-loader',
                 options: { presets: ['react', 'es2015'] }
              }
          },
          {
-            test: /\.scss/,
+            test: /\.css$/,
             use: ['style-loader', 'css-loader', 'sass-loader']
          }
       ]
