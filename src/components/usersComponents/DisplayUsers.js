@@ -32,18 +32,22 @@ class DisplayUsers extends Component {
                 {Object.entries(
                   this.props.users[0] ? this.props.users[0].users.data[0] : []
                 ).map(([key, value]) => {
-                  if (key === "address") {
-                    {
-                      Object.entries(value).map(([key1, value1]) => {
-                        if (key1 === "geo") {
-                          return null;
-                        } else {
-                          return <TableCell>{key1}</TableCell>;
-                        }
-                      });
-                    }
+                  if (key === "address" || key === "company") {
                     return (
+                      <span>
                       <TableCell className="tableCellHeader">{key}</TableCell>
+                      <TableRow className="tableRowHeader">
+                      {
+                        Object.entries(value).map(([key1, value1]) => {
+                          if (key1 === "geo") {
+                            return null;
+                          } else {
+                            return <TableCell className="tableCellHeader">{key1}</TableCell>;
+                          }
+                        })
+                      }
+                      </TableRow>
+                      </span>
                     );
                   } else {
                     return (
